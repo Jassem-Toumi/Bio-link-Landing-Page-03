@@ -1,0 +1,417 @@
+/* Importing GoogleFont  */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-family:  'Montserrat Alternates', sans-serif;
+  box-sizing: inherit;
+}
+
+/* -------------------------------------------Framework Background ------------------------------------------- */
+.framework {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(-50deg, hsla(230, 60%, 20%)0%, hsl(303, 87%, 40%) 80%, hsl(340, 100%, 59%) 100% );
+}
+
+/* ------------------------------------------------Card----------------------------------- */
+.card{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0;
+  inset: 0;
+  width: 90%;
+  max-width: 600px;
+  height: 94%;
+  top: 3%;
+  bottom: 3%;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-radius: 25px;
+}
+
+.header{
+  display: flex;
+  flex-direction: column;
+  height: 40%;
+  background-color: #f3f4f5;
+  border-radius: 25px 25px 0  0;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+svg{
+  top: 0;
+  height: fit-content;
+}
+
+.profile-picture{
+  display: flex;
+  margin: .5rem auto;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  background-image: url('./profile-pic.png');
+  background-position: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 5px solid rgb(229, 228, 228); 
+  box-shadow: 7px 5px 7px rgb(189, 188, 188);
+  animation: oscillation 1s linear 0s infinite alternate;
+}
+
+@keyframes oscillation {
+  0%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(-5px);
+  }
+}
+
+.name{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  width: 100%;
+  margin: 1rem auto 0 auto;
+}
+
+.name h1{
+  text-align: center;
+  height: fit-content;
+  width: fit-content;
+  margin: .5rem auto;
+  margin: 0 auto;
+  position: relative;
+  cursor: pointer;
+ color: #000000e8;
+}
+
+.name h1:hover{
+  color: hsl(303, 87%, 30%);
+}
+
+.name h1:after{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #f3f4f5;
+  /* border-left: 1px solid black; */
+  left: 0;
+  animation: typing 1s steps(12) 2 forwards;
+}
+
+@keyframes typing {
+  100%{
+    left: 100%;
+    margin: 0 -1.2rem 0 1.2rem;
+  }
+}
+
+
+.profession{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+  height: fit-content;
+  width: 100%;
+}
+
+.profession h2{
+  width: fit-content;
+  height: fit-content;
+  margin: .5rem auto 0 auto;
+  padding: 5px 0;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  color: rgb(39, 39, 39);
+}
+
+
+
+/* ------------ CARD CONTENT ---------- */
+.card-content{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0;
+  height: 30% ;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  bottom: 15%;
+}
+
+.about, .icons-section{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.about{
+  margin: 1.5rem auto;
+}
+
+.about h3, .about p{
+  text-align: center;
+  height: fit-content;
+  margin-bottom: 1rem;
+}
+
+.about h3{
+  font-size: 18px;
+}
+
+.about p{
+  padding: 0 3rem;
+  line-height: 1.5rem;
+  color:rgb(0, 0, 0);
+  font-weight: 400px;
+}
+
+/* .icons-section h3{
+  text-align: center;
+  height: fit-content;
+  margin-bottom: 1rem;
+} */
+
+.grid-layout{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio, .icons, .portfolio{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio h3, .icons h3{
+  text-align: center;
+  height: fit-content;
+  margin: 0 auto 1rem auto;
+  font-size: 15px;
+}
+
+/* ------PORTFOLIO BUTTON ------- */
+
+.portfolio {
+  width: fit-content;
+  height: fit-content;
+  padding: 0;
+  border-radius: 25px;
+}
+
+.portfolio a{
+  text-decoration: none;
+  padding: .5rem 1rem;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  background: linear-gradient(-50deg, hsla(230, 60%, 20%)0%, hsl(303, 87%, 40%) 80%, hsl(340, 100%, 59%) 100%);
+  border-radius: 25px;
+  transition: .4s;
+}
+.portfolio a:hover{
+  transform: scale(1.2);
+}
+.icons-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 auto;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: fit-content;
+}
+.icons-grid img{
+  width: 30px;
+  height: auto;
+  justify-self: center;
+}
+img.mail-icon{
+  width: 34px;
+}
+.icons-grid a{
+  display: inline-block;
+  width: fit-content;
+  max-width: 30px;
+  height: fit-content;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+/*  ---------------------------- SOCIALS ------------------------------------ */
+
+.socials{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: 10%;
+  max-width: 150px;
+  border-radius: 0 0 25px 25px;
+  border-color: rgb(66, 66, 66);
+  border-left: 1px solid rgb(66, 66, 66);
+  background: transparent;
+  margin: 0 auto;
+  padding: 1rem 0;
+  left: 6%;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials h3{
+  font-size: 12px;
+  text-align: center;
+  font-weight: 400;
+  height: fit-content;
+  margin: 0 auto .5rem auto;
+}
+.socials a{
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: fit-content;
+  height: fit-content;
+  margin: 0 auto .5rem auto;
+}
+
+.socials img{
+  width: 24px;
+  height: auto;
+}
+
+
+/* ----------------------------------------- RESPONSIVE DESIGN ------------------------------------ */
+
+@media only screen and (max-width: 600px) {
+  .grid-layout{
+    grid-template-columns: 1fr;
+  }
+
+  .card{
+    padding-bottom: 1.5rem;
+  }
+
+  .about{
+    margin: .5rem auto;
+  }
+
+  .portfolio{
+    padding-bottom: 1rem;
+  }
+
+  .socials{
+    padding-left: .5rem;
+  }
+
+    .about p {
+      font-size: 15px;
+      padding: 0 1rem;
+    }
+  
+    .about h3 {
+      font-size: 15px;
+    }
+  
+    .portfolio h3,
+    .icons h3 {
+      font-size: 15px;
+
+    }@keyframes typing {
+      100% {
+        left: 100%;
+        margin: 0 -1.2rem 0 1.2rem;
+        width: 10%;
+      }
+    }
+}
+
+
+
+/* ------Extra SMALL DEVICES -------- */
+@media screen and (max-width:300px){
+  .socials img{
+    width: 20px;
+    height: auto;
+  }
+
+  .name h1{
+    font-size: 20px;
+  }
+
+  .profession h2{
+    font-size: 13px;
+  }
+
+  .profile-picture{
+    width: 110px;
+    height: 110px;
+  }
+
+  .about h3{
+    font-size: 12px;
+  }
+  .about p{
+    font-size: 15px;
+    padding: 0 .5rem;
+  }
+
+  .portfolio h3,
+  .icons h3{
+    font-size: 12px;
+  }
+}
